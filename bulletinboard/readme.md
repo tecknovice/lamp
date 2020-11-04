@@ -8,6 +8,14 @@ This is the code for the Vue.js [tutorial on Scotch.io](https://scotch.io/tutori
 2. Run `node server.js`.
 3. Visit [http://localhost:8080](http://localhost:8080).
 
+## Docker run
+```bash
+docker build --tag bulletinboard:1.0 .
+docker run --publish 8000:8080 --detach --name bb bulletinboard:1.0
+docker rm --force bb
+
+```
+
 ## RESTful API (contributed by Jason Lam)
 
 1. **Use Node.js & Express for backend server and router.**
